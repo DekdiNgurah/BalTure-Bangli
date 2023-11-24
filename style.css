@@ -3,10 +3,13 @@ body{
     background-image: url(pattern.avif);
     background-repeat: repeat;
     background-size: 300px;
-    
+   
     
 }
 .header{
+    margin-top: 25vh;
+}
+.header1{
     
     font-family: 'Paytone One', sans-serif;
     font-size: 3.5rem;
@@ -18,6 +21,7 @@ body{
     font-size: 1rem;
     color: rgb(216, 216, 216);
     font-family: 'Familjen Grotesk', sans-serif;
+    text-align: center;
 }
 .tombol{
 
@@ -26,7 +30,7 @@ body{
     color: white;
     width: 17vh;
     height: 6vh;
-    margin-top: -1px;
+    margin-top: 15vh;
     font-family: Lucida sans;
     font-size: 14px;
     text-decoration: none;
@@ -54,6 +58,9 @@ body{
     height: auto;
     z-index: -1;
     filter: brightness(67%);
+    background-repeat: no-repeat;
+    background-size: cover; /* Untuk memastikan gambar latar belakang menutupi seluruh layar */
+    background-attachment: fixed; /* Mencegah gambar latar belakang bergerak saat menggulir */
 }
 
 
@@ -75,7 +82,7 @@ body{
 .mynavbar .offcanvas-title{
     font-family: 'Marhey', sans-serif;
     font-size: 2.4rem;
-    color: #64CCC5;
+    color:  #04364A ;
 }
 .mynavbar .offcanvas-body{
     font-family: 'Kdam Thmor Pro', sans-serif;
@@ -85,7 +92,7 @@ body{
 }
 .mynavbar .nav-link{
     text-transform: uppercase;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .mynavbar .nav-link:hover{
     color:  #64CCC5;
@@ -118,7 +125,8 @@ body{
 
 #introblocks figure {
     position: relative;
-    margin: 428px 0; /* Sesuaikan margin sesuai kebutuhan */
+    margin: 200vh 0; /* Sesuaikan margin sesuai kebutuhan */
+    
    
 }
 
@@ -169,61 +177,149 @@ body{
 }
 
 
-.deskripsi{
-    margin-top: -40vh;
+
+/* Add the following CSS styles to enhance the appearance */
+
+/* Additional Styles for Improved Appearance */
+
+.deskripsi {
+    padding: 50px 20px; /* Add padding for better spacing */
+    margin-top: -185vh;
 }
+
+/* Styles for .group section */
 .group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 0; /* Sesuaikan margin sesuai kebutuhan */
+    flex-direction: column; /* Change to column layout for mobile phones */
+    align-items: center; /* Center items in the column */
+    margin: 30px 0;
 }
 
 .one_half {
     flex: 1;
-    max-width: 48%; /* Sesuaikan lebar sesuai kebutuhan */
+    max-width: 100%; /* Occupy full width for mobile phones */
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
+/* Styles for images in .one_half */
 .one_half img {
-    max-width: 100%; /* Membuat gambar responsif */
+    max-width: 100%;
     height: auto;
+    border: 1px solid #ccc; /* Add a border around the image */
+    border-radius: 8px; /* Add border-radius for a rounded corner effect */
 }
 
-.nospace {
-    padding: 0;
-}
-
-.heading {
-    color: #0077ff;
-}
-
+/* Styles for article content */
 .article {
     text-align: justify;
 }
 
-/* Untuk menambahkan ruang di antara elemen-elemen */
-.inspace-15 {
-    margin-bottom: 15px;
+/* Styles for h6.heading-bangli */
+.heading-bangli {
+    color: #008060;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
 }
 
-.borderedbox {
-    border: 1px solid #ccc;
+/* Styles for p.penjelasan-bangli */
+.penjelasan-bangli {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Styles for additional paragraphs */
+.first p {
+    margin-top: 15px; /* Add margin to separate paragraphs */
+}
+
+/* Style for links inside h6.heading-bangli */
+.heading-bangli a {
+    text-decoration: none;
+    color: #0077ff;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for links inside h6.heading-bangli */
+.heading-bangli a:hover {
+    color: #0047a3;
+}
+.arik {
+    text-align: center;
+    color: #008080;
+}
+
+.ye, .yo {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.arak {
+    margin-right: 20px;
+    width: 70vh;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ok {
+    flex-direction: column;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.photo {
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Sesuaikan lebar setiap item sesuai kebutuhan untuk tampilan laptop */
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+.judul-galeri{
+    font-family: 'Berkshire Swash', serif;
+    text-align: center;
+}
+/* Style for the Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
     padding: 10px;
-}
-
-/* Style tambahan agar terlihat rapi */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-article {
-    margin-bottom: 20px; /* Sesuaikan margin sesuai kebutuhan */
-}
-
-
-
-
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #backToTop:hover {
+    background-color: #0047a3;
+  }
+  
+  
 
 
 
@@ -235,7 +331,7 @@ article {
 
 /* Media Query*/
 /* laptop */
-@media(max-width: 992px){
+@media(max-width: 992px) and (min-width: 768px){
     html{
     font-size: 75%;
     }
@@ -258,7 +354,7 @@ article {
     }
     .mynavbar .nav-link{
         text-transform: uppercase;
-        color: rgb(0, 0, 0);
+        color: white;
     }
     .mynavbar .nav-link:hover{
         color:  #64CCC5;
@@ -278,19 +374,32 @@ article {
         margin-left: 2vw;
     
     }
+    .photo {
+        width: calc(50% - 20px); /* Mengurangi jumlah item pada satu baris untuk mempertimbangkan ukuran layar laptop */
+    }
+
+
+
    
 }
 /* tablet */
-@media(max-width: 768px){
+@media(min-width: 768px) and (max-width: 991px) {
     html{
         font-size: 65%;
     }
-    .tombol{
-       margin-top: -10%;
+    .header .header1{
+        margin-top: -2vh;
+        font-size: 3.1rem;
     }
+    .tombol{
+    margin-top: 4%;
+        font-size: 1.4rem;
+        width: 90px;
+        height: 38px;
+     }
     #introblocks figure {
         position: relative;
-        margin: 110px 0; /* Sesuaikan margin sesuai kebutuhan */
+        margin: 200vh 0; /* Sesuaikan margin sesuai kebutuhan */
     }
     .bangli1 {
         margin-bottom: 20px; /* Sesuaikan margin-bottom sesuai kebutuhan */
@@ -304,7 +413,7 @@ article {
     }
     .mynavbar .nav-link{
         text-transform: uppercase;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
     .mynavbar .nav-link:hover{
         color:  #64CCC5;
@@ -316,6 +425,16 @@ article {
         margin-left: 2vw;
     
     }
+    .ye, .yo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .arak {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add margin for spacing between image and text */
+        width: 100%; /* Occupy full width on tablets */
+    }
 }
    
     
@@ -323,48 +442,79 @@ article {
     
 
 /* mobile phone */
-@media(max-width: 576px){
+/* mobile phone */
+@media(max-width: 767px){
     html{
         font-size: 60%;
     }
-    .tombol{
-       margin-top: -19%;
-    }
-    #introblocks figure {
-        position: relative;
-        margin: 10px 0; /* Sesuaikan margin sesuai kebutuhan */
-    }
-    .bangli1 {
-        margin-bottom: 20px; /* Sesuaikan margin-bottom sesuai kebutuhan */
-    }
-
-    .deskripsi-bangli {
-        margin-bottom: 20px; /* Sesuaikan margin-bottom sesuai kebutuhan */
+    .mynavbar .offcanvas-title{
+        color: #04364A;
+        font-size: 2.4rem;
+        font-weight: bold;
+        font-family: 'Marhey', sans-serif;
     }
     .mynavbar .nav-link{
         text-transform: uppercase;
         color: rgb(0, 0, 0);
+        font-size: 2rem;
     }
-    .mynavbar .nav-link:hover{
-        color:  #64CCC5;
+    .penjelasan-bangli .p{
+        font-size: 150%;
     }
-    .deskripsi {
-        margin-top: 70px; /* Sesuaikan nilai sesuai kebutuhan */
-    }
-    
-    /* Atau jika Anda ingin mengatur jarak ke bawah dari introblocks */
-    #introblocks {
-        margin-bottom: 60px; /* Sesuaikan nilai sesuai kebutuhan */
-    }
-    .logo-bangli{
-        width: 150px;
-        height: 150px;
+    .header .header1{
         margin-top: -5vh;
-        margin-left: 2vw;
-    
+        font-size: 2.5rem;
     }
-  
-    
-    
+    .tombol{
+        margin-top: -11%;
+        font-size: 1rem;
+        width: 60px;
+        height: 36px;
+     }
+     #introblocks figure {
+        margin: 34vh 0; /* Adjust the margin to make the images elongated vertically */
+    }
+    .bangli1 {
+
+        margin-bottom: 20px; 
+    }
+    .deskripsi{
+        margin-top: -30vh;
+    }
+    .one_half {
+        max-width: 100%; /* Occupy full width for mobile phones */
+    }
+
+    .group {
+        margin-top: 0; /* Reset top margin for better spacing on mobile phones */
+    }
+    .ye, .yo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .arak {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add margin for spacing between image and text */
+        width: 100%; /* Occupy full width on mobile phones */
+    }
+    .imgroup li {
+        width: 100%; /* Setiap item akan memenuhi lebar penuh pada tampilan mobile phone */
+    }
+       
+
+
+
+
+
+
 
 }
+   
+
+    
+
+   
+
+    
+    
