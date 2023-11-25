@@ -3,9 +3,12 @@ body{
     background-image: url(pattern.avif);
     background-repeat: repeat;
     background-size: 300px;
+    margin: 0;
+    padding: 0;
    
     
 }
+
 .header{
     margin-top: 25vh;
 }
@@ -50,6 +53,20 @@ body{
     background-color: transparent;
     color: rgb(0, 47, 255);
 }
+#topBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
 .bg-img{
     position: absolute;
     top: 0;
@@ -184,7 +201,7 @@ body{
 
 .deskripsi {
     padding: 50px 20px; /* Add padding for better spacing */
-    margin-top: -185vh;
+    margin-top: -195vh;
 }
 
 /* Styles for .group section */
@@ -257,24 +274,24 @@ body{
 
 .arak {
     margin-right: 20px;
-    width: 70vh;
+    width: 25vw;
+    height: 12vh;
     border-radius: 8px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-}
+
 
 .ok {
     flex-direction: column;
 }
+
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
+    z-index: 1;
 }
 
 .photo {
@@ -282,7 +299,8 @@ p {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.33% - 20px); /* Sesuaikan lebar setiap item sesuai kebutuhan untuk tampilan laptop */
+    width: calc(33.33% - 20px); /* Sesuaikan lebar setiap item sesuai kebutuhan untuk tampilan laptop/desktop */
+    cursor: pointer; /* Tambahkan properti cursor untuk menunjukkan bahwa elemen dapat diklik */
 }
 
 .photo img {
@@ -295,29 +313,18 @@ p {
 .photo:hover img {
     transform: scale(1.1);
 }
+
+
+
+
 .judul-galeri{
     font-family: 'Berkshire Swash', serif;
     text-align: center;
-}
-/* Style for the Back to Top Button */
-#backToTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #0077ff;
     color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #backToTop:hover {
-    background-color: #0047a3;
-  }
+    font-size: 3rem;
+   
+}
+
   
   
 
@@ -374,6 +381,7 @@ p {
         margin-left: 2vw;
     
     }
+    
     .photo {
         width: calc(50% - 20px); /* Mengurangi jumlah item pada satu baris untuk mempertimbangkan ukuran layar laptop */
     }
@@ -383,47 +391,68 @@ p {
    
 }
 /* tablet */
-@media(min-width: 768px) and (max-width: 991px) {
-    html{
+@media (min-width: 768px) and (max-width: 991px) {
+    html {
         font-size: 65%;
     }
-    .header .header1{
+    .header1 {
         margin-top: -2vh;
-        font-size: 3.1rem;
+        font-size: 3.5rem;
     }
-    .tombol{
-    margin-top: 4%;
+    .header-bangli{
+        font-size: 1.3rem;
+    }
+    .tombol {
+        margin-top: 4%;
         font-size: 1.4rem;
         width: 90px;
         height: 38px;
-     }
+    }
+    #topBtn{
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        font-size: 22px;
+        width: 43px;
+        height: 43px;
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
     #introblocks figure {
         position: relative;
-        margin: 200vh 0; /* Sesuaikan margin sesuai kebutuhan */
+        margin: 105vh 0; /* Sesuaikan margin sesuai kebutuhan */
+    }
+    .deskripsi{
+        margin-top: -110vh;
     }
     .bangli1 {
         margin-bottom: 20px; /* Sesuaikan margin-bottom sesuai kebutuhan */
     }
-
+    
     .deskripsi-bangli {
         margin-bottom: 20px; /* Sesuaikan margin-bottom sesuai kebutuhan */
     }
-    .mynavbar .offcanvas-body{
+    .mynavbar .offcanvas-body {
         font-size: 1.9rem;
     }
-    .mynavbar .nav-link{
+    .mynavbar .nav-link {
         text-transform: uppercase;
         color: rgb(255, 255, 255);
     }
-    .mynavbar .nav-link:hover{
-        color:  #64CCC5;
+    .mynavbar .nav-link:hover {
+        color: #64CCC5;
     }
-    .logo-bangli{
+    .mynavbar .navbar-toggler-icon {
+    color: #ffffff ;
+    }
+    .logo-bangli {
         width: 170px;
         height: 170px;
         margin-top: -5vh;
         margin-left: 2vw;
-    
     }
     .ye, .yo {
         flex-direction: column;
@@ -435,7 +464,13 @@ p {
         margin-bottom: 20px; /* Add margin for spacing between image and text */
         width: 100%; /* Occupy full width on tablets */
     }
+    .judul-galeri {
+        font-family: 'Berkshire Swash', serif;
+        text-align: center;
+        font-size: 3rem; /* Sesuaikan ukuran font sesuai kebutuhan */
+    }
 }
+
    
     
    
@@ -444,42 +479,76 @@ p {
 /* mobile phone */
 /* mobile phone */
 @media(max-width: 767px){
-    html{
+    html .pi{
         font-size: 60%;
+    }
+    .header1 {
+        margin-top: -1vh;
+        font-size: 1rem;
+    }
+    .header-bangli{
+        font-size: 10px;
     }
     .mynavbar .offcanvas-title{
         color: #04364A;
-        font-size: 2.4rem;
+        font-size: 1.4rem;
         font-weight: bold;
         font-family: 'Marhey', sans-serif;
     }
     .mynavbar .nav-link{
         text-transform: uppercase;
         color: rgb(0, 0, 0);
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .penjelasan-bangli .p{
         font-size: 150%;
     }
-    .header .header1{
-        margin-top: -5vh;
-        font-size: 2.5rem;
+    .header1{
+        margin-top: -15vh;
+        font-size: 1.4rem;
     }
     .tombol{
-        margin-top: -11%;
-        font-size: 1rem;
-        width: 60px;
-        height: 36px;
-     }
+        margin-top: -14vh;
+        font-size: 8px;
+        width: 48px;
+        height: 28px;
+    }
+    #topBtn{
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        font-size: 16px;
+        width: 34px;
+        height: 34px;
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+    .mynavbar .navbar-toggler-icon {
+        color: #ffffff ;
+    }
+    .mynavbar .navbar-brand,
+    .mynavbar {
+        color: rgb(255, 255, 255);
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: 'Marhey', sans-serif;
+    }
+    
      #introblocks figure {
-        margin: 34vh 0; /* Adjust the margin to make the images elongated vertically */
+        margin: 22vh 0; /* Adjust the margin to make the images elongated vertically */
+    }
+    .heading-bangli{
+        font-size: 1.5rem;
     }
     .bangli1 {
 
         margin-bottom: 20px; 
     }
     .deskripsi{
-        margin-top: -30vh;
+        margin-top: -160px;
     }
     .one_half {
         max-width: 100%; /* Occupy full width for mobile phones */
@@ -499,6 +568,14 @@ p {
         width: 100%; /* Occupy full width on mobile phones */
     }
     .imgroup li {
+        width: 100%; /* Setiap item akan memenuhi lebar penuh pada tampilan mobile phone */
+    }
+    .judul-galeri{
+        font-family: 'Berkshire Swash', serif;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .photo {
         width: 100%; /* Setiap item akan memenuhi lebar penuh pada tampilan mobile phone */
     }
        
